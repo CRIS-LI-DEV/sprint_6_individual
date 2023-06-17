@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block contenido %}{% load static %}
+
+ <div class="w3-row w3-justify-content" >
+<div class="w3-col w3-third  w3-padding-16" >
+<form method="POST" class="form-container">
+    <h2>Registro de miembros de la comunidad</h2>
+      <div class=" w3-justify-content">
+        <img src="{% static 'logo.png' %}" width="100px" alt="" />
+      </div>
+
+    {% csrf_token %}
+  
+ {{formulario}}
+    
+<br>
+    <button type="submit" class="w3-button w3-black">Login</button>
+  </form>
+</div>
+
+{% endblock%}

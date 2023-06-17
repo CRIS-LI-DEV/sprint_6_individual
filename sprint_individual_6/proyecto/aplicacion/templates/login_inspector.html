@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% block contenido %} {% load static%}
+
+<div class="w3-row w3-justify-content">
+  <div class="w3-col w3-third w3-center w3-padding-16">
+ 
+      <h2>Login Inspector</h2>
+      <div id="contenedor_img">
+        <img src="{% static 'logo.png' %}" width="100px" alt="" />
+      </div>
+    <form method="POST" class="form-container">
+     
+
+      {% csrf_token %} {{formulario }}
+
+
+
+      <button type="submit">Login</button>
+    </form>
+  
+  
+  
+  </div>
+</div>
+
+  <table>
+    <tr>
+      <th>Auxiliares</th>
+      <th>Edificio</th>
+      <th>Patio</th>
+      <th>Números</th>
+    </tr>
+    <tr>
+      <td>Nombre 1</td>
+      <td>Edificio A</td>
+      <td>Patio 1</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <td>Nombre 2</td>
+      <td>Edificio B</td>
+      <td>Patio 2</td>
+      <td>456</td>
+    </tr>
+    <tr>
+      <td>Nombre 3</td>
+      <td>Edificio C</td>
+      <td>Patio 3</td>
+      <td>789</td>
+    </tr>
+    <!-- Agrega más filas según sea necesario -->
+  </table>
+{% endblock %}
+<script>
+
+
+
+
+
+
+</script>

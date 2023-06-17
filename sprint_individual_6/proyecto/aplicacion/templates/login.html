@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block contenido %} {% load static%}
+
+<div class="w3-row w3-justify-content">
+  <div class="w3-col w3-third w3-center">
+ 
+      <h2>Login</h2>
+      <div id="contenedor_img">
+        <img src="{% static 'logo.png' %}" width="100px" alt="" />
+      </div>
+    <form method="POST" class="form-container">
+     
+
+      {% csrf_token %} {{formulario }}
+<br>
+      <button type="submit" class="w3-button w3-black">Login</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+ <div class="w3-row w3-justify-content" >
+<div class="w3-col w3-third  " >
+<h3> Inspector[a]</h3>
+  <div class="w3-half w3-third">
+    <div style="background-color: #f44336; padding-left:20px; color:white" >
+    <h3> {{user.first_name}} {{user.last_name}}</h3></div>   
+ <strong> <div style="margin-left: 20px;" id="asig"></div></strong>
+
+<h3>Funcionarios</h3>
+
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>Auxiliares</th>
+      <th>Edificio</th>
+      <th>Patio</th>
+      <th>Números</th>
+    </tr>
+    <tr>
+      <td>Patio central</td>
+      <td>Jose Smith</td>
+      <td>+56914567</td>
+      <td>jose@CMT.cl</td>
+    </tr>
+    <tr>
+       <td>Sector Oriente</td>
+      <td>Juan Perez Soza</td>
+      <td>+56914567</td>
+      <td>jose@CMT.cl</td>
+    </tr>
+    <tr>
+     <td>Sector Poniente</td>
+      <td>martin Lutero Rodriguez</td>
+      <td>+56914567</td>
+      <td>jose@CMT.cl</td>
+    </tr>
+    <!-- Agrega más filas según sea necesario -->
+  </table>
+  <br>
+  <br>
+  <h3 >Atrasados </h3>
+  <table class="w3-table w3-striped">
+   <tbody>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha de Atraso</th>
+      <th>Asignatura</th>
+    </tr>
+    <tr>
+      <td>Juan Pérez</td>
+      <td>10/06/2023</td>
+      <td>Matemáticas</td>
+    </tr>
+    <tr>
+      <td>María Gómez</td>
+      <td>11/06/2023</td>
+      <td>Lenguaje</td>
+    </tr>
+    <tr>
+      <td>Pedro Rodríguez</td>
+      <td>12/06/2023</td>
+      <td>Ciencias</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+ </div>
+{% endblock %}

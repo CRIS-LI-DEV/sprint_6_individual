@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<style>
+table {
+  width: 400px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+</style>
+ <div class="w3-row w3-justify-content" >
+<div class="w3-col w3-third  " >
+
+
+ 
+  <div class="w3-half w3-third">
+    <div style="background-color: #f44336; padding-left:20px; color:white" >
+    <h3> Alumno[a]</h3></div>  
+<table>
+    <tbody>
+
+        <tr><td>Nombre de usuario</td><td>{{user.username}}</td></tr>
+        
+        <tr><td>Nombre</td><td>{{user.first_name}}</td></tr>
+        
+        <tr><td>Apellilldo</td><td>{{user.last_name}}</td></tr>
+    </tbody>
+</table>
+
+<table>
+
+<thead>
+
+
+</thead>
+
+
+<tbody>
+
+
+
+
+</tbody>
+
+
+
+</table>
+<br>
+
+
+  <table id="tablaNotas">
+    <tr>
+      <th>Asignatura</th>
+      <th>Notas</th>
+    </tr>
+
+
+    <tbody>
+
+        <tr><td>Matematicas</td><td><div id="r1"></div></td></tr>
+        <tr><td>Historia</td><td><div id="r2"> </div></td></tr>
+        <tr><td>Ciencias Sociales</td><td><div id="r3"></div></td></tr>
+        <tr><td>Lenguaje</td><td><div id="r4"></div></td></tr>
+        <tr><td>Fisica</td><td><div id="r5"></div></td></tr>
+       
+      
+
+    </tbody>
+  </table>
+
+
+
+</div>
+ </div>
+
+ <script>/// Obtener referencia a la tabla
+
+document.getElementById('r1').innerHTML= imprimirNumerosFlotantes().toString();
+document.getElementById('r2').innerHTML= imprimirNumerosFlotantes().toString();
+document.getElementById('r3').innerHTML= imprimirNumerosFlotantes().toString();
+document.getElementById('r4').innerHTML= imprimirNumerosFlotantes().toString();
+document.getElementById('r5').innerHTML= imprimirNumerosFlotantes().toString();
+
+
+
+
+
+
+
+
+function imprimirNumerosFlotantes() {
+  const numeros = [];
+
+  for (let i = 0; i < 6; i++) {
+    const numero = Math.random() * 10;
+    numeros.push(" " + numero.toFixed(1).toString()+" ");
+  }
+
+  return numeros;
+}
+
+imprimirNumerosFlotantes();
+
+
+ </script>
+{% endblock %}

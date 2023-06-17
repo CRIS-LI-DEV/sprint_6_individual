@@ -1,0 +1,88 @@
+{% extends 'base.html' %} {% block contenido %} {% load static%}
+<div class="w3-row w3-justify-content">
+  
+  <div class="w3-half w3-third">
+    <div style="background-color: #f44336; padding-left:20px; color:white" >
+    <h3>Profesor[a]: {{user.first_name}} {{user.last_name}}</h3></div>   
+ <strong> <div style="margin-left: 20px;" id="asig"></div></strong>
+
+<br>
+  <table class="w3-table w3-str" border="1">
+    <thead>
+        <tr><th>Alumnos[as]</th> <th>Notas</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Marcelo Bravo</td>
+        <td><div id="r1"></div></td>
+      </tr>
+      <tr>
+        <td>Camilo Lillo</td>
+        <td>
+          <div><div id="r2"></div></div>
+        </td>
+      </tr>
+      <tr>
+        <td>Piter Wilso</td>
+        <td>
+          <div><div id="r3"></div></div>
+        </td>
+      </tr>
+      <tr>
+        <td>Thot Melcar</td>
+        <td>
+          <div><div id="r4"></div></div>
+        </td>
+      </tr>
+      <tr>
+        <td>Texapc Aukan</td>
+        <td>
+          <div><div id="r5"></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+
+<script>
+  /// Obtener referencia a la tabla
+
+  document.getElementById("r1").innerHTML =
+    imprimirNumerosFlotantes().toString();
+  document.getElementById("r2").innerHTML =
+    imprimirNumerosFlotantes().toString();
+  document.getElementById("r3").innerHTML =
+    imprimirNumerosFlotantes().toString();
+  document.getElementById("r4").innerHTML =
+    imprimirNumerosFlotantes().toString();
+  document.getElementById("r5").innerHTML =
+    imprimirNumerosFlotantes().toString();
+
+  var asignaturas = [
+    "Matemáticas",
+    "Lenguaje",
+    "Historia",
+    "Ciencias",
+    "Inglés",
+    "Educación Física",
+    "Arte",
+  ];
+
+  var numeroAleatorio = Math.floor(Math.random() * 6);
+
+  document.getElementById("asig").innerHTML = asignaturas[numeroAleatorio];
+
+  function imprimirNumerosFlotantes() {
+    const numeros = [];
+
+    for (let i = 0; i < 6; i++) {
+      const numero = Math.random() * 10;
+      numeros.push(" " + numero.toFixed(1).toString() + " ");
+    }
+
+    return numeros;
+  }
+
+  imprimirNumerosFlotantes();
+</script>
+{% endblock %}

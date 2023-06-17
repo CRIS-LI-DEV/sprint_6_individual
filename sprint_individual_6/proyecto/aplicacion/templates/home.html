@@ -1,0 +1,115 @@
+{% extends 'base.html' %} {% block contenido %} {% load static %}
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Colegio Moahamed Tawfik</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Tecnologico Artistico</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+     <p>
+¡Bienvenidos al Colegio Colegio Moahamed Tawfik Artístico Tecnológico! Aquí exploraremos juntos la fusión única entre el arte y la tecnología. ¡Disfruten su viaje creativo!</p>
+    <p>En una ciudad en constante búsqueda de innovación, nació elColegio Moahamed Tawfik con un propósito claro: 
+      responder a las necesidades cambiantes de la educación en el siglo XXI. Conscientes de que el 
+      mundo estaba experimentando una acelerada transformación tecnológica y artística, los fundadores 
+      de esta institución se propusieron crear un entorno educativo único que fomentara el desarrollo de n
+      uevas estrategias de aprendizaje.
+
+El Colegio Moahamed Tawfik se convirtió en un faro de creatividad y tecnología, 
+donde los estudiantes eran estimulados a pensar de manera crítica, a explorar 
+su imaginación y a desarrollar habilidades artísticas y tecnológicas desde una temprana
+ edad. Reconociendo que cada estudiante tenía talentos y capacidades únicas, se implementaron
+  programas personalizados que se adaptaban a las necesidades individuales de cada uno.
+
+El enfoque principal del colegio era el desarrollo artístico. Se crearon espacios
+ de aprendizaje dedicados a la música, el teatro, la danza y las artes visuales, donde 
+ los estudiantes podían expresar su creatividad libremente y descubrir nuevas 
+ formas de comunicación. Se invitaba a artistas profesionales a compartir sus 
+ conocimientos y experiencias, brindando a los estudiantes oportunidades para aprender de los mejores en el campo artístico. </p>
+    <div class="w3-half">
+      <img src="{% static 'col_5.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="{% static 'col_4.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="{% static 'col_3.jpg' %}" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="{% static 'col_8.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="{% static 'col_7.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="{% static 'col_6.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Visión</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+
+    <p>
+Nuestra visión es ser un colegio líder a nivel internacional, fusionando el desarrollo 
+artístico y tecnológico para formar líderes visionarios y creativos. Enfocados en la 
+individualidad de cada estudiante, brindamos una educación personalizada que estimula 
+la curiosidad y el pensamiento crítico. Promovemos el amor por el aprendizaje a través 
+de programas innovadores que abarcan las artes y la tecnología. Nuestro enfoque tecnológico
+ vanguardista prepara a los estudiantes para los desafíos de la sociedad digital. Fomentamos 
+ la colaboración, el emprendimiento y la responsabilidad social, inculcando valores éticos 
+ y respeto hacia la diversidad</p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Equipo Directivo</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="{% static 'p1.jpg' %}" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">Directora del Deparatamento <br> de investigación y Desarrollo <br> de estrategias del aprendizaje</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="{% static 'p2.jpg' %}" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Jane Doe</h3>
+          <p class="w3-opacity">Director</p>
+          <p>Doctor en Artes Contemporaneas, Universidad Mayor de Tokyo<br> 
+            Ingeniero en Bio informatica, Universidad de Ciencias del Progreso Humano<br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="{% static 'p3.jpg' %}" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Jefa Academica</p>
+          <p>Doctora en Ciencias del Desarrollo Congnitivo<br> Lienciada en Educación</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
